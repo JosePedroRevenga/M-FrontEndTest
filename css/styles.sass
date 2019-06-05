@@ -1,0 +1,114 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    background-color: #f0f0f0
+    width: 95%
+    padding: 2%
+    margin: auto
+    align-content: center
+    display: grid
+    grid-template-columns: repeat(2, auto) 0.25fr repeat(2, auto)
+    font-family: 'Roboto', sans-serif
+
+    #anchorp
+        grid-column: 3/3
+        align-self: center
+        padding: 5%
+        background-color: #FFF
+        box-shadow: 2px 5px 20px #a5a5a5
+        border-radius: 10px
+        text-align: center
+    
+    .formContainer
+        display: grid
+        grid-template-columns: 1fr 0.2fr
+        grid-column-gap: 0.5vh
+
+        .searchInput
+            grid-column: 1/2
+            padding: 3% 1%
+            border: 0.5px solid #dcdcdc
+            border-radius: 2px
+        &::placeholder
+            color: #b6b3b3
+    
+        #searchButton
+            background-color: #f4f4f4
+            color: #463841
+            border-color: #e1e1e1
+            border-radius: 3.5px
+    
+    .userInfoContainer
+        display: grid
+        grid-row-gap: 1vh
+
+        .userDontExist
+            padding: 5% 3%
+            margin-top: 5%
+            background-color: #f9dede
+            color: #982051
+            border: 1px solid #d9bcbc
+            border-radius: 7px
+            text-align: left
+
+        .userPersonalData
+            margin-top: 5%
+            min-width: 180px
+            display: grid
+            grid-column-gap: 1vh
+            grid-template-columns: 1fr 2fr auto
+
+            .avatarContainer
+                grid-column: 1/1
+                max-width: 120px
+
+                .userAvatar
+        
+                    width: 100%
+                    border-radius: 5px
+            
+            .userDetails
+                grid-column: 2/2
+                text-align: left
+                display: grid
+                grid-template-rows: auto
+                grid-row-gap: 0.3vh
+                max-height: 5vh
+    
+    .repoList
+        display: grid
+        grid-template-columns: auto
+        overflow-y: scroll
+        max-height: 350px
+        border-top: 1px solid #000
+        &::-webkit-scrollbar
+            width: 0 !important 
+
+        .repoItem
+            padding: 5% 2%
+            display: grid
+            grid-template-columns: 2fr 0.4fr
+            min-width: 50px
+            border-bottom: 1px solid #cdcdcd
+            
+
+            .repoItemName
+                grid-column: 1/2
+                font-weight: bold
+                text-align: left
+            
+            .repoItemDetails
+                min-width: 70px
+        
+        .repoLink
+            text-decoration: none
+            color: #000
+            &::active
+                text-decoration: none
+            &::visited
+                text-decoration: none
+            &::link
+                text-decoration: none
+
